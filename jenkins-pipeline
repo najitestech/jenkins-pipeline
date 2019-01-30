@@ -22,6 +22,10 @@ pipeline {
                 echo 'Monitoring..'
             }
         }
-      
+        stage(Maturity) {
+            steps {
+                echo 'Matured'
+            }
+        }
     }
 }

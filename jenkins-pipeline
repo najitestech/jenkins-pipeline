@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent jnks_slave_job3
 
     stages {
         stage('Build') {

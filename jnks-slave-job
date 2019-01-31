@@ -1,0 +1,23 @@
+node ('jnks_slave_job3') {
+   stage('One') {
+       git 'https://github.com/najitestech/jenkins-pipeline.git'
+   }
+     
+node ('jnks_slave_job3') {       
+   stage('Two') {
+       git 'https://github.com/najitestech/huginn.git'
+   }
+   
+node ('jnks_slave_job3')  {   
+   stage('Three') {
+       echo 'Still Building'
+   }
+  
+node ('jnks_slave_job3')  {
+   stage('Four') {
+       echo 'Finish'
+    }
+   }
+  }
+ }
+}

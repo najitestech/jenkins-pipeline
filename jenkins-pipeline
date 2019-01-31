@@ -9,7 +9,7 @@ pipeline {
         }   
         stage('Test') {
             steps {
-                sh 'newvm.yml'
+                git 'https://github.com/najitestech/jenkins-pipeline.git/newvm.yml'
             }
         }
         stage('Deploy') {

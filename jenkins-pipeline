@@ -1,5 +1,5 @@
 pipeline {
-    agent jnks_slave_job3
+    agent ('jnks_slave_job3') {
 
     stages {
         stage('Build') {
@@ -7,6 +7,7 @@ pipeline {
                 echo 'Building...This is just a testing pipeline'
             }
         }
+     }   
         stage('Test') {
             steps {
                 echo 'Testing...'

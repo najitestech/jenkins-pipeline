@@ -1,13 +1,12 @@
 pipeline {
-    agent ('jnks_slave_job3') {
+    agent any
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building...This is just a testing pipeline'
             }
-        }
-     }   
+        }   
         stage('Test') {
             steps {
                 echo 'Testing...'

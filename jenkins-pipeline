@@ -30,7 +30,7 @@ pipeline {
 
         stage(overflow) {
             steps {
-                echo 'overflow'
+                git 'https://github.com/najitestech/jenkins-pipeline.git/jnks-slave-job'
                 }
              }   
     }

@@ -27,13 +27,12 @@ pipeline {
                 echo 'Matured'
             }
         }
-node ('jnks_slave_job3') {
+
         stage(overflow) {
             steps {
                 echo 'overflow'
                 }
-             }
-          }   
+             }   
     }
 }
 

@@ -8,15 +8,5 @@ node {
                 build("jnks_slave_job3")
             }
         )
-node {
-    stage("Build") {
-        parallel (
-            "Third Build" : {
-                build("jnks_slave_job2")
-            },
-            "Last Build" : {
-                build("Deploying-to-vCenter")
-            }
-        )
     }
 }

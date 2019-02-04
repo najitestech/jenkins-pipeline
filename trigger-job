@@ -4,7 +4,7 @@ node ('jnks_slave_job3') {
    }
  }
   
-node ('jnks_slave_job3') {
+node ('Ansible-master') {
    stage('Two.*') {
        echo 'uptime'
    }

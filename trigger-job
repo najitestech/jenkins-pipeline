@@ -3,11 +3,10 @@ node ('jnks_slave_job3') {
        git 'https://github.com/najitestech/jenkins-pipeline.git'
    }
  }
-     
-node ('jnks_slave_job3') {       
-   stage('Two') {
-               steps {
-                 echo 'Building...This is just a testing pipeline'
+   stages {
+         stage('Build') {
+             steps {
+                 echo 'Building...This is just a testing pipeline'  
        }
    }
  }

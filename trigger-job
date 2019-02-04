@@ -1,13 +1,11 @@
-stage('Deploy') {
-    node {
-            ansiblePlaybook colorized: true, 
-            credentialsId: 'ssh-jenkins',
-            limit: "${HOST_PROVISION}",
-            installation: 'ansible',
-            inventory: 'inventory.ini', 
-            playbook: 'new-vm.yml', 
-            sudo: true,
-            sudoUser: 'jenkins'
-        }
-    }
-}
+node ('jnks_slave_job3') {
+   stage('One') {
+       git 'https://github.com/najitestech/jenkins-pipeline.git'
+   }
+ }
+     
+node ('jnks_slave_job3') {       
+   stage('Two') {
+       git 'https://github.com/najitestech/jenkins-pipeline/blob/master/new-vm.yml'
+   }
+ }

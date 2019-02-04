@@ -11,12 +11,10 @@ node ('Ansible-master') {
  }
  
  node ('Ansible-master') {
-     stages {
-         stage("Final") {
-             steps {
-                 build('jnks-slave-job2')
-                 build('jnks-slave-job3')
-            }
+   stage("Final") {
+       steps {
+           build('jnks-slave-job2')
+           build('jnks-slave-job3')
         }
     }
 }

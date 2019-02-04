@@ -8,7 +8,8 @@ node {
                 build("jnks_slave_job3")
             }
         )
-        build("jnks_slave_job2")
+node {
+    stage("Build") {
         parallel (
             "Third Build" : {
                 build("jnks_slave_job2")

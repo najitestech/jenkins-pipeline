@@ -1,16 +1,16 @@
-node ('jnks-slave-job3') {
+node ('jnks_slave_job3') {
    stage('One') {
        git 'https://github.com/najitestech/jenkins-pipeline.git'
    }
  }
   
-node ('jnks-slave-job3') {
+node ('jnks_slave_job3') {
    stage('Two.*') {
        echo 'ansible-playbook new-vm.yml'
    }
  }
  
- node ('jnks-slave-job3') {
+ node ('jnks_slave_job3') {
    stage("Final") {
        steps {
            build('Deloying-to-vCenter')

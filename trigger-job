@@ -13,8 +13,8 @@ node ('Ansible-master') {
  node ('Ansible-master') {
    stage("Final") {
        steps {
-           build('jnks-slave-job2')
-           build('jnks-slave-job3')
+           //build('jnks-slave-job2')
+           //build('jnks-slave-job3')
         }
     }
 }

@@ -23,8 +23,15 @@ pipeline {
             }
         }
         stage(Maturity) {
-       node {
-             def job = build job: 'Deploying-to-vCenter'
+            agent {
+                  docker{
+                         reusedNode false
+                         image 'ubuntu'
+                  }
+            
+            }
+            steps {
+                echo 'Running test'
             }
         }
     }

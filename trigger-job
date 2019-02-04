@@ -24,7 +24,9 @@ node ('jnks_slave_job3') {
     stage("Final") {
         parallel (
             "Final Build" : {
-                build("splunk_code")
+                build("jenkins-pippeline-job/master")
+                propagate: true,
+                wait: true
             },
         )
     }

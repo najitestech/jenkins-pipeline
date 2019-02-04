@@ -25,7 +25,6 @@ pipeline {
         stage(Maturity) {
             agent {
                   docker{
-                         reusedNode false
                          image 'ubuntu'
                   }
             

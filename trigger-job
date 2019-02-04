@@ -1,4 +1,4 @@
-node ('jnks_slave_job3') {
+node ('Ansible-master') {
    stage('One') {
        git 'https://github.com/najitestech/jenkins-pipeline.git'
    }
@@ -6,6 +6,6 @@ node ('jnks_slave_job3') {
   
 node ('Ansible-master') {
    stage('Two.*') {
-       echo 'uptime'
+       echo 'ansible-playbook new-vm.yml'
    }
  }

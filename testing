@@ -1,7 +1,7 @@
 node {
     stage("Build") {
         parallel (
-            "First Build" : {
+            "future-branch" : {
                 build("jnks-slave-job2")
             },
             "Second Build" : {

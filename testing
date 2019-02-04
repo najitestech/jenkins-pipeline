@@ -1,1 +1,21 @@
-teasting file 1..2..3..4
+node {
+    stage("Build") {
+        parallel (
+            "First Build" : {
+                build("jnks-slave-job2")
+            },
+            "Second Build" : {
+                build("jnks-slave-job3")
+            }
+        )
+        build("test-job")
+        parallel (
+            "Third Build" : {
+                build("jnks-slave-job2")
+            },
+            "Last Build" : {
+                build("jnks-slave-job3")
+            }
+        )
+    }
+}

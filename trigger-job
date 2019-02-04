@@ -23,8 +23,8 @@ stage('Deploy') {
             credentialsId: 'ssh-jenkins',
             limit: "${HOST_PROVISION}",
             installation: 'ansible',
-            inventory: 'provision/inventory.ini', 
-            playbook: 'provision/new-vm.yml', 
+            inventory: 'inventory.ini', 
+            playbook: 'new-vm.yml', 
             sudo: true,
             sudoUser: 'jenkins'
         }

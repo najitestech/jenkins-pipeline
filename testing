@@ -2,11 +2,8 @@ node {
     stage("Build") {
         parallel (
             "First Build" : {
-                build("jnks_slave_job2")
+                build("Deploying-to-vCenter")
             },
-            "Second Build" : {
-                build("jnks_slave_job3")
-            }
         )
     }
 }

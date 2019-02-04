@@ -3,8 +3,9 @@ node ('jnks_slave_job3') {
        git 'https://github.com/najitestech/jenkins-pipeline.git'
    }
  }
-   stages('Two') {
-         steps {
-               echo 'Building...This is just a testing pipeline'  
-    }
+  
+node ('jnks_slave_job3') {
+   stage('One') {
+       git 'https://github.com/najitestech/jenkins-pipeline.git'
+   }
  }

@@ -10,13 +10,12 @@ node ('Ansible-master') {
    }
  }
  
-pipeline {
-agent Ansible-master
-    stages {
-        stage("build") {
-            steps {
-                build('jnks-slave-job2')
-                build('jnks-slave-job3')
+ node ('Ansible-master') {
+     stages {
+         stage("Final") {
+             steps {
+                 build('jnks-slave-job2')
+                 build('jnks-slave-job3')
             }
         }
     }

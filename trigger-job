@@ -23,8 +23,8 @@ node ('jnks_slave_job3') {
  node ('jnks_slave_job3') {
     stage("Final") {
         parallel (
-            "Third Build" : {
-                build("jenkins-pipeline-job")
+            "Final Build" : {
+                 build("jenkins-pipeline-job")
             },
         )
     }

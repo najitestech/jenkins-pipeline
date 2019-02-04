@@ -6,6 +6,6 @@ node ('jnks_slave_job3') {
   
 node ('jnks_slave_job3') {
    stage('Two.*') {
-       echo '/trigger/new-vm.yml'
+       shell 'uptime'
    }
  }

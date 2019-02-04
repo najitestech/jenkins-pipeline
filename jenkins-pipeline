@@ -24,7 +24,7 @@ pipeline {
         }
         stage(Maturity) {
             agent {
-                  docker{
+                  docker {
                          image 'ubuntu'
                   }
             }

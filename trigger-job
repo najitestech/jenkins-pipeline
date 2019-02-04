@@ -6,6 +6,6 @@ node ('jnks_slave_job3') {
      
 node ('jnks_slave_job3') {       
    stage('Two') {
-       git 'https://github.com/najitestech/jenkins-pipeline/blob/master/new-vm.yml'
+       git 'https://github.com/najitestech/jenkins-pipeline/blob/future-branch/new-vm.yml'
    }
  }

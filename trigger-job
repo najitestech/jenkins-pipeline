@@ -13,7 +13,7 @@ node ('jnks_slave_job3') {
  node ('jnks_slave_job3') {
    stage("Final") {
        steps {
-           build('Deloying-to-vCenter')
+           build('Deploying-to-vCenter')
            //build('jnks-slave-job3')
         }
     }

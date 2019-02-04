@@ -11,7 +11,7 @@ node ('Ansible-master') {
  }
  
 pipeline {
-agent any
+agent Ansible-master
     stages {
         stage("build") {
             steps {

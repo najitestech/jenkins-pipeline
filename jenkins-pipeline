@@ -27,7 +27,6 @@ pipeline {
                   docker{
                          image 'ubuntu'
                   }
-            
             }
             steps {
                 echo 'Running test'

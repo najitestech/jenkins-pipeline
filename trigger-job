@@ -5,7 +5,7 @@ node ('jnks_slave_job3') {
  }
   
 node ('jnks_slave_job3') {
-   stage('One') {
-       git 'https://github.com/najitestech/jenkins-pipeline.git'
+   stage('Two.*') {
+       echo 'Finish'
    }
  }

@@ -10,10 +10,10 @@ node ('Ansible-master') {
    }
  }
  
- node ('Ansible-master') {
+ node {
    stage("Final") {
        steps {
-           //build('jnks-slave-job2')
+           build('Deloying-to-vCenter')
            //build('jnks-slave-job3')
         }
     }

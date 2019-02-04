@@ -24,7 +24,7 @@ node ('jnks_slave_job3') {
     stage("Final") {
         parallel (
             "Third Build" : {
-                build("Deploying-to-vCenter")
+                build("jenkins-pipeline-job")
             },
         )
     }

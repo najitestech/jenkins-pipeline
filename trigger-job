@@ -24,7 +24,9 @@ node ('jnks_slave_job3') {
     stage("Final") {
         parallel (
             "Final Build" : {
-                build("jenkins-pippeline-job") propergate: true, wait: true
+                build("jenkins-pippeline-job") 
+                    propergate: true
+                    wait: true
             },
         )
     }

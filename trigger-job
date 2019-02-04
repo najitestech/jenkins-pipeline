@@ -10,7 +10,7 @@ node ('jnks_slave_job3') {
    }
  }
  
- node {
+ node ('jnks_slave_job3') {
     stage("Final") {
         parallel (
             "Third Build" : {

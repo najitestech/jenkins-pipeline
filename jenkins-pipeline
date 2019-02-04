@@ -23,8 +23,8 @@ pipeline {
             }
         }
         stage(Maturity) {
-            node {
-                  def job = build job: 'Deploying-to-vCenter'
+       node {
+             def job = build job: 'Deploying-to-vCenter'
             }
         }
     }

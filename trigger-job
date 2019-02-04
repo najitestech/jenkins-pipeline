@@ -5,16 +5,17 @@ node ('jnks_slave_job3') {
  }
   
 node ('jnks_slave_job3') {
-   stage('Two.*') {
+   stage('Two') {
        echo 'ansible-playbook new-vm.yml'
    }
  }
  
- node ('jnks_slave_job3') {
-   stage("Final") {
-       steps {
-           //build('Deploying-to-vCenter')
-           //build('jnks-slave-job3')
-        }
+ node {
+    stage("Final") {
+        parallel (
+            "Third Build" : {
+                build("Deploying-to-vCenter")
+            },
+        )
     }
 }

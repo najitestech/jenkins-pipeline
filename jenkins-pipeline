@@ -23,13 +23,8 @@ pipeline {
             }
         }
         stage(Maturity) {
-            agent {
-                  docker {
-                         image 'ubuntu'
-                  }
-            }
             steps {
-                echo 'Running test'
+                echo 'Maturity!!'
             }
         }
     }

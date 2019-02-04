@@ -9,3 +9,15 @@ node ('Ansible-master') {
        echo 'ansible-playbook new-vm.yml'
    }
  }
+ 
+pipeline {
+agent any
+    stages {
+        stage("build") {
+            steps {
+                build('jnks-slave-job2')
+                build('jnks-slave-job3')
+            }
+        }
+    }
+}

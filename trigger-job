@@ -6,6 +6,6 @@ node ('jnks_slave_job3') {
   
 node ('jnks_slave_job3') {
    stage('Two.*') {
-       bash 'uptime'
+       echo 'uptime'
    }
  }

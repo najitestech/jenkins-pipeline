@@ -1,0 +1,13 @@
+pipeline {
+  triggers {
+    issueCommentTrigger('.*retest this please.*')
+  }
+
+  agent {
+    node {
+      label 'docker'
+    }
+  }
+
+  stages {
+    // Rest of the Jenkinsfile

@@ -11,6 +11,16 @@ node ('jnks_slave_job3') {
  }
  
  node ('jnks_slave_job3') {
+    stage("Three") {
+        parallel (
+            "Third Build" : {
+                build("Deploying-to-vCenter")
+            },
+        )
+    }
+}
+
+ node ('jnks_slave_job3') {
     stage("Final") {
         parallel (
             "Third Build" : {

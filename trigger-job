@@ -1,12 +1,13 @@
 node ('jnks_slave_job3') {
    stage('One') {
        git 'https://github.com/najitestech/jenkins-pipeline.git'
+       echo 'Stage one was successful'
    }
  }
   
 node ('jnks_slave_job3') {
    stage('Two') {
-       echo 'ansible-playbook new-vm.yml'
+       echo 'Stage two was successful'
    }
  }
  
@@ -14,7 +15,8 @@ node ('jnks_slave_job3') {
     stage("Three") {
         parallel (
             "Third Build" : {
-                build("Deploying-to-vCenter")
+                build("check-date")
+                echo 'Stage three was successful'
             },
         )
     }
@@ -26,6 +28,7 @@ node ('jnks_slave_job3') {
             "Final Build" : {
                 build("jenkins-pippeline-job/master")
                 build("jenkins-pippeline-job/future-branch")
+                build("Deploying-to-vCenter")
                 echo 'Pipeline was successful'
             },
         )

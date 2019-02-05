@@ -26,8 +26,8 @@ node ('jnks_slave_job3') {
     stage("Final") {
         parallel (
             "Final Build" : {
-                build("jenkins-pippeline-job/master")
-                build("jenkins-pippeline-job/future-branch")
+                //build("jenkins-pippeline-job/master")
+                //build("jenkins-pippeline-job/future-branch")
                 build("Deploying-to-vCenter")
             },
         )

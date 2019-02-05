@@ -15,7 +15,7 @@ node ('jnks_slave_job3') {
     stage("Three") {
         parallel (
             "Third Build" : {
-                build("check-date")
+                build("jenkins-pippeline-job/master")
                 echo 'Stage three was successful'
             },
         )
@@ -26,7 +26,6 @@ node ('jnks_slave_job3') {
     stage("Final") {
         parallel (
             "Final Build" : {
-                //build("jenkins-pippeline-job/master")
                 //build("jenkins-pippeline-job/future-branch")
                 build("Deploying-to-vCenter")
             },

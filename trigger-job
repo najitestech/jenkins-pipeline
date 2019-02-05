@@ -29,7 +29,6 @@ node ('jnks_slave_job3') {
                 build("jenkins-pippeline-job/master")
                 build("jenkins-pippeline-job/future-branch")
                 build("Deploying-to-vCenter")
-                echo 'Pipeline was successful'
             },
         )
     }

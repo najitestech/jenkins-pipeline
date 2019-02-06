@@ -1,26 +1,23 @@
 node ('jnks_slave_job2') {
+   
    stage('One') {
        sh 'cd /root git https://github.com/najitestech/jenkins-pipeline.git'
        echo 'Stage one was successful'
    }
- }    
+   }    
 
-node ('jnks_slave_job2') {
    stage('Two') {
       sshagent(['Test-server2']) {
          sh 'ls -la'
          sh 'cat /etc/*-release'
-     }
    }
- }
+   }
 
-node ('jnks_slave_job2') {
    stage('Three') {
       sshagent(['Test-server2']) {
          sh 'uname -a'
          sh 'ip a'
-         sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
+         //sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
          echo 'Stage three was successful'
-        }
-     }
+   }
    }

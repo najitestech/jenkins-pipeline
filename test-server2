@@ -9,7 +9,7 @@ node {
    stage('Two') {
       sshagent(['Test-server2']) {
          sh 'ls -la'
-         //sh 'scp -o StrictHostKeyChecking=no /root/JNKs root@192.168.0.26:/home'
+         sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
      }
    }
  }

@@ -18,7 +18,8 @@ node ('jnks_slave_job2'){
    stage('Three') {
       sshagent(['Test-server2']) {
          sh 'uptime'
-         sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
+         sh 'ip a'
+         //sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
          echo 'Stage three was successful'
         }
      }

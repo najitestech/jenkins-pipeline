@@ -1,4 +1,4 @@
-node ('jnks_slave_job2') {
+node {
    
    stage('One') {
        sh 'cd /root git https://github.com/najitestech/jenkins-pipeline.git'

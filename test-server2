@@ -17,7 +17,7 @@ node {
 node {
    stage('Three') {
       sshagent(['Test-server2']) {
-         sh 'hostname'
+         sh 'uname -a'
          sh 'ip a'
          //sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
          echo 'Stage three was successful'

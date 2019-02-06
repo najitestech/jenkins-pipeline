@@ -1,11 +1,11 @@
-node ('jnks_slave_job2') {
+node ('jnks_slave_job3') {
    stage('One') {
        git 'https://github.com/najitestech/jenkins-pipeline.git'
        echo 'Stage one was successful'
    }
  }    
 
-node ('jnks_slave_job2') {
+node ('jnks_slave_job3') {
    stage('Two') {
       sshagent(['Test-server2']) {
          sh 'ls -la'
@@ -14,7 +14,7 @@ node ('jnks_slave_job2') {
    }
  }
 
-node ('jnks_slave_job2') {
+node ('jnks_slave_job3') {
    stage('Three') {
       sshagent(['Test-server2']) {
          sh 'uptime'

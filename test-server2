@@ -4,6 +4,7 @@ node {
        echo 'Stage one was successful'
    }
    }
+   
 node {
    stage('Two') {
       sshagent(['Test-server2']) {
@@ -12,6 +13,7 @@ node {
    }
    }
    }
+   
 node {
    stage('Three') {
       sshagent(['Test-server2']) {

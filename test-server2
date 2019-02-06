@@ -19,6 +19,7 @@ node {
       sshagent(['Test-server2']) {
          sh 'uptime'
          //sh 'scp -o StrictHostKeyChecking=no /root/JNKs root@192.168.0.26:/home'
+         echo 'Stage three was successful'
         }
      }
    }

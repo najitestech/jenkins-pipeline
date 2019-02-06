@@ -14,7 +14,7 @@ node {
    }
  }
 
-node ('jnks_slave_job2'){
+node {
    stage('Three') {
       sshagent(['Test-server2']) {
          sh 'uptime'

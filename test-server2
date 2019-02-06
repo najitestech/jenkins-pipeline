@@ -1,17 +1,18 @@
 node {
-   
    stage('One') {
        git 'https://github.com/najitestech/jenkins-pipeline.git'
        echo 'Stage one was successful'
    }
-
+   }
+node {
    stage('Two') {
       sshagent(['Test-server2']) {
          sh 'ls -la'
          sh 'cat /etc/*-release'
    }
    }
-
+   }
+node {
    stage('Three') {
       sshagent(['Test-server2']) {
          sh 'uname -a'

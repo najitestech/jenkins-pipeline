@@ -8,6 +8,7 @@ node {
 node {
    stage('Two') {
       sshagent(['najite192.168.0.26']) {
+         sh 'uname -a'
          sh 'ls -la'
          sh 'cat /etc/*-release'
    }

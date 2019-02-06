@@ -1,14 +1,11 @@
-pipeline {
-    angent any
-
-    node {
+node {
        stage('One') {
            git 'https://github.com/najitestech/jenkins-pipeline.git'
            echo 'Stage one was successful'
        }
-     }
+     }    
 
-    node {
+node {
        stage('Two') {
           sshagent(['Test-server2']) {
              sh 'ls -la'
@@ -17,7 +14,7 @@ pipeline {
        }
      }
 
-     node {
+node {
        stage('Three') {
           sshagent(['Test-server2']) {
              sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'

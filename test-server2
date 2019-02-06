@@ -1,6 +1,6 @@
 node ('jnks_slave_job2') {
    stage('One') {
-       cd /root git 'https://github.com/najitestech/jenkins-pipeline.git'
+       sh 'cd /root git https://github.com/najitestech/jenkins-pipeline.git'
        echo 'Stage one was successful'
    }
  }    

@@ -1,7 +1,7 @@
 node {
    
    stage('One') {
-       sh 'cd /root git https://github.com/najitestech/jenkins-pipeline.git'
+       git https://github.com/najitestech/jenkins-pipeline.git'
        echo 'Stage one was successful'
    }
    }    

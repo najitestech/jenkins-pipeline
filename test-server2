@@ -19,7 +19,7 @@ node {
       sshagent(['najite192.168.0.26']) {
          sh 'uname -a'
          sh 'ip a'
-         //sh 'scp -o StrictHostKeyChecking=no /root/public najite@192.168.0.26:/home'
+         sh 'scp -o StrictHostKeyChecking=no /root/public najite@192.168.0.26:/home'
          echo 'Stage three was successful'
    }
    }

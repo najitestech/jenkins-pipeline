@@ -1,11 +1,11 @@
-node ('jnks_slave_job3') {
+node {
    stage('One') {
        git 'https://github.com/najitestech/jenkins-pipeline.git'
        echo 'Stage one was successful'
    }
  }
   
-node ('jnks_slave_job3') {
+node {
    stage('Two') {
       sshagent(['Test-server2']) {
          sh 'scp -o StrictHostKeyChecking=no /root/Pound-2.8 root@192.168.0.26:/home'

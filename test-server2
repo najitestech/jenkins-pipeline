@@ -1,4 +1,4 @@
-node {
+node ('jnks_slave_job2') {
    stage('One') {
        git 'https://github.com/najitestech/jenkins-pipeline.git'
        echo 'Stage one was successful'

@@ -5,7 +5,7 @@ node ('jnks_slave_job2') {
    }
  }    
 
-node {
+node ('jnks_slave_job2') {
    stage('Two') {
       sshagent(['Test-server2']) {
          sh 'ls -la'

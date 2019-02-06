@@ -19,7 +19,7 @@ node ('jnks_slave_job2') {
       sshagent(['Test-server2']) {
          sh 'uname -a'
          sh 'ip a'
-         //sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
+         sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
          echo 'Stage three was successful'
         }
      }

@@ -9,6 +9,14 @@ node {
    stage('Two') {
       sshagent(['Test-server2']) {
          sh 'ls -la'
+         sh 'cat /etc/*-release'
+     }
+   }
+ }
+ 
+ node {
+   stage('Three') {
+      sshagent(['Test-server2']) {
          sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
      }
    }

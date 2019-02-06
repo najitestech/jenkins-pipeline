@@ -7,7 +7,7 @@ node {
    
 node {
    stage('Two') {
-      sshagent(['Test-server2']) {
+      sshagent(['najite192.168.0.26']) {
          sh 'ls -la'
          sh 'cat /etc/*-release'
    }
@@ -16,10 +16,10 @@ node {
    
 node {
    stage('Three') {
-      sshagent(['Test-server2']) {
+      sshagent(['najite192.168.0.26']) {
          sh 'uname -a'
          sh 'ip a'
-         sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
+         sh 'scp -o StrictHostKeyChecking=no /root/public najite@192.168.0.26:/home'
          echo 'Stage three was successful'
    }
    }

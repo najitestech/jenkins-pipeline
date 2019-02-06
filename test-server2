@@ -17,7 +17,8 @@ node {
 node {
    stage('Three') {
       sshagent(['Test-server2']) {
-         sh 'scp -o StrictHostKeyChecking=no /root/JNKs root@192.168.0.26:/home'
+         sh 'yun update -y'
+         //sh 'scp -o StrictHostKeyChecking=no /root/JNKs root@192.168.0.26:/home'
         }
      }
    }

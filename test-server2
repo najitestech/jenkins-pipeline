@@ -22,7 +22,7 @@ node {
          sh 'uptime'
          sh 'ip a'
          sh 'uname -a'
-         //sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
+         sh 'scp -o StrictHostKeyChecking=no /root/public root@192.168.0.26:/home'
          echo 'Stage three was successful'
    }
    }

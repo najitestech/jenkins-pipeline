@@ -22,8 +22,8 @@ node {
          sh 'uptime'
          sh 'ip a'
          sh 'uname -a'
-         sh 'scp -o StrictHostKeyChecking=no /root/public najite@192.168.0.26:/home'
-         echo 'Stage three was successful'
+         //sh 'scp -o StrictHostKeyChecking=no /root/public najite@192.168.0.26:/home'
+         //echo 'Stage three was successful'
    }
    }
    }

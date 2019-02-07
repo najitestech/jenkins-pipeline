@@ -30,6 +30,7 @@ pipeline {
 
         stage(overflow) {
             steps {
+                sh 'ls -la'
                 git 'https://gitlab.com/najitesit/developments.git'
                 }
              }   

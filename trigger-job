@@ -28,7 +28,7 @@ node ('jnks_slave_job3') {
             "Final Build" : {
                 //build("jenkins-pippeline-job/future-branch")
                 build("Deploying-to-vCenter")
-                echo 'Final stage was successful'
+                echo 'Final stage was built successful'
             },
         )
     }

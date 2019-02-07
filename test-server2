@@ -1,5 +1,6 @@
 node {
    stage('One') {
+       sh 'uname -a'
        git 'https://github.com/najitestech/jenkins-pipeline.git'
        echo 'Stage one was successful'
    }

@@ -19,7 +19,7 @@ node {
 node {
    stage('Three') {
       sshagent(['najite192.168.0.26']) {
-         //sh 'uptime'
+         sh 'uptime'
          sh 'ip a'
          sh 'uname -a'
          //sh 'scp -o StrictHostKeyChecking=no /root/public najite@192.168.0.26:/home'

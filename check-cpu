@@ -1,15 +1,15 @@
 ---
 - name: checking for host name
-    shell: hostname
-    register: hostname
+  shell: hostname
+  register: hostname
     
 - name: Printing host name
-    debug:
-      msg: "{{hostname.stdout}}"
+  debug:
+    msg: "{{hostname.stdout}}"
 
 - name: checking for server memory
   shell: cat /proc/meminfo
-    register: memory
+  register: memory
 
 - name: Printing memory usege
   debug:

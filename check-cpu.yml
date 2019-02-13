@@ -1,0 +1,5 @@
+---
+- name: Checking Hostsname, Memory and HD
+  hosts: 192.168.0.90
+  gather_facts: True
+  become: yes

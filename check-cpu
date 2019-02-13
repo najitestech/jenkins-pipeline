@@ -32,7 +32,7 @@
     var: cpu.stdout_lines
 
 - name: Done
-  script: /etc/ansible/figlet.sh
+  script: ./figlet.sh
   register: done
 
 - name: Printing fanle msg 

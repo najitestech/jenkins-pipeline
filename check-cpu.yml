@@ -4,11 +4,9 @@
   gather_facts: True
   become: yes
   tasks:
-
   - name: checking for host name
     shell: hostname
-    register: hostname
-    
+    register: hostname  
 
   - name: Printing host name
     debug:

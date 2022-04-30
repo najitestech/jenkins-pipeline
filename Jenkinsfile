@@ -24,7 +24,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('Aproval') {
       steps {
         input(message: 'Do you want to Proceed?', ok: 'OK')
       }

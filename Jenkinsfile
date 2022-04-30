@@ -18,5 +18,11 @@ pipeline {
       }
     }
 
+    stage('Execute figlet file') {
+      steps {
+        sh 'bash figlet.sh'
+      }
+    }
+
   }
 }

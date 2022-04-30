@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        input(message: 'Do you want to Proceed?', ok: 'OK')
+      }
+    }
+
   }
 }

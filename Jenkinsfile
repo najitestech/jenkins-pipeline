@@ -2,21 +2,10 @@ pipeline {
   agent any
   stages {
     stage('Declarative') {
-      parallel {
-        stage('Declarative') {
-          steps {
-            sh '''cal
+      steps {
+        sh '''cal
 git --version
 whoami'''
-          }
-        }
-
-        stage('Check for POM') {
-          steps {
-            fileExists 'pom.xml'
-          }
-        }
-
       }
     }
 

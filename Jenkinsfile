@@ -23,7 +23,6 @@ pipeline {
         sh '''sudo yum makecache
 && sudo yum -y install figlet
 '''
-        sh 'bash figlet.sh'
       }
     }
 

@@ -20,9 +20,7 @@ pipeline {
 
     stage('Execute figlet file') {
       steps {
-        sh '''sudo yum makecache
-&& sudo yum -y install figlet
-'''
+        sh 'date | figlet -f slant'
       }
     }
 

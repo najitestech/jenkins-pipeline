@@ -17,7 +17,6 @@ pipeline {
 
         stage('Check for Dockerfile') {
           steps {
-            waitUntil(initialRecurrencePeriod: -1)
             fileExists 'Dockerfile'
           }
         }

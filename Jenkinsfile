@@ -1,14 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'centos'
-      args '''sudo groupadd docker
-sudo usermod -aG docker ${USER}
-su -s ${USER}
-docker run hello-world'''
-    }
-
-  }
+  agent any
   stages {
     stage('Test') {
       parallel {

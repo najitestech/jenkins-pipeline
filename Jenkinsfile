@@ -25,8 +25,19 @@ pipeline {
     }
 
     stage('Execute figlet file') {
-      steps {
-        sh 'date | figlet -f slant'
+      parallel {
+        stage('Execute figlet file') {
+          steps {
+            sh 'date | figlet -f slant'
+          }
+        }
+
+        stage('') {
+          steps {
+            mail(subject: 'Test', body: 'This is a test mail from Jenkinsd', from: 'Jenkins Server', to: 'najite @me.com')
+          }
+        }
+
       }
     }
 

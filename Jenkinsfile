@@ -37,6 +37,12 @@ pipeline {
             sh 'ansible --version'
           }
         }
+        
+        stage('Installed Package check') {
+          steps {
+            sh 'ansible --version'
+          }
+        }
 
       }
     }

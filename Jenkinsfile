@@ -25,8 +25,20 @@ pipeline {
     }
 
     stage('Execute figlet file') {
-      steps {
-        sh 'date | figlet -f slant'
+      parallel {
+        stage('Execute figlet file') {
+          steps {
+            sh 'date | figlet -f slant'
+          }
+        }
+
+        stage('Install Packages') {
+          steps {
+            sh '''yum install ansible -y
+&& ansible --version'''
+          }
+        }
+
       }
     }
 

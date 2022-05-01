@@ -34,7 +34,7 @@ pipeline {
 
         stage('Install Packages') {
           steps {
-            sh '''yum install ansible -y
+            sh '''sudo yum install ansible -y
 && ansible --version'''
           }
         }

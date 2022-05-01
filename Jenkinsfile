@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'POD_LABEL'
+    }
+
+  }
   stages {
     stage('Test') {
       parallel {

@@ -1,7 +1,7 @@
 pipeline {
   agent {
-    node {
-      label 'POD_LABEL'
+    dockerfile {
+      filename 'Dockerfile'
     }
 
   }

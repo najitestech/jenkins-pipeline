@@ -1,2 +1,42 @@
 teasting file 1..2..3..4
 1..2..3..4..
+
+
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: managed-nfs-storage
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+provisioner: nfs-client-provisioner
+parameters:
+  archiveOnDelete: "true"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  namespace: jenkins
+  name: jenkins-pv
+  labels:
+    type: local
+spec:
+  storageClassName: managed-nfs-storage
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/jenkins_home"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: jenkins
+  name: jenkins-pvc
+spec:
+  storageClassName: managed-nfs-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi

@@ -97,3 +97,35 @@ spec:
   resources:
     requests:
       storage: 3Gi
+      
+      
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-server
+  namespace: jenkins
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      nodeName: knode1.ntek.com
+      containers:
+      - name: jenkins
+        image: jenkins/jenkins:lts-jdk11
+        ports:
+          - containerPort: 8080
+        volumeMounts:
+        - name: jenkins-persistent-storage
+          mountPath: /var/jenkins_home
+      volumes:
+      - name: jenkins-persistent-storage
+        #emptyDir: {}
+        persistentVolumeClaim:
+          claimName: jenkins-pvc
+      restartPolicy: Always
